@@ -1,66 +1,61 @@
-import { Box, Heading, Button, Flex, Stack } from "@chakra-ui/react";
-import bgImage from "../components/img/6.jpg"
+import { Box, Button, Image, Text } from "@chakra-ui/react";
 
-function Header() {
+export default function Header() {
   return (
-    <Box
-      h="50vh"
-      bg="gray"
-      bgImage={`url(${bgImage})`}
-      bgRepeat="no-repeat"
-      bgSize="cover"
-    >
-      <Flex
-        direction="column"
+    <>
+      <Box
+        boxSize="xl"
+        bgImage="https://i.pinimg.com/originals/da/ac/ae/daacae01106f8169f1385eac669cec82.jpg"
+        color="white"
+        height="300px"
+        display="flex"
         alignItems="center"
-        justify="center"
-        h="100%"
-        bg="rgb(0 0 0 / 50%)"
-        p={["0 10%", null, "0 20%"]}
+        justifyContent="center"
       >
-        <Heading
-          color="white"
-          textTransform="uppercase"
-          textAlign="center"
-          fontWeight="light"
-          letterSpacing="5px"
-        >
-         Naturaleza
-        </Heading>
-        <Stack
-          direction={{ base: "colum", sm: "row" }}
-          spacing="40px"
-          mt="30px"
-          width={["100%", null, "auto"]}
-        >
-          <Button
-            variant="outline"
-            size="lg"
-            textTransform="uppercase"
-            fontWeight="light"
-            borderRadius="0"
-            color="white"
-            letterSpacing="1px"
-            _hover={{ color: "black", bg: "white" }}
+        <Box>
+          <Text
+            textAlign="center"
+            fontSize="30px"
+            fontFamily="Montserrat"
+            fontWeight="lighter"
           >
-            Ver detalles
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            textTransform="uppercase"
-            fontWeight="light"
-            borderRadius="0"
-            color="white"
-            letterSpacing="1px"
-            _hover={{ color: "black", bg: "white" }}
+            DOMINA EL TERRENO
+          </Text>
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            gap={6}
           >
-            Ver Video
-          </Button>
-        </Stack>
-      </Flex>
-    </Box>
+            <Button
+              padding="10px"
+              background="none"
+              color="white"
+              border="1px solid white"
+              cursor="pointer"
+              _hover={{
+                bgColor: "white",
+                color: "black",
+              }}
+            >
+              VER DETALLES
+            </Button>
+            <Button
+              padding="10px"
+              background="none"
+              color="white"
+              border="1px solid white"
+              cursor="pointer"
+              _hover={{
+                bgColor: "white",
+                color: "black",
+              }}
+            >
+              VER VIDEO
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+    </>
   );
 }
-
-export default Header;
